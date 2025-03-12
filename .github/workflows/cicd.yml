@@ -38,5 +38,5 @@ jobs:
             docker pull ${{ secrets.DOCKER_USERNAME }}/my-flask-app
             docker stop flask_app || true
             docker rm flask_app || true
-            docker run -d --name flask_app -p 20123:20123 ${{ secrets.DOCKER_USERNAME }}/my-flask-app
+            docker run -d --name flask_app -p 20123:5000 ${{ secrets.DOCKER_USERNAME }}/my-flask-app
 

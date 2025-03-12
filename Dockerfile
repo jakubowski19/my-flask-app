@@ -11,5 +11,5 @@ COPY app.py app.py
 # Instalujemy zależności
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Uruchamiamy aplikację w trybie produkcyjnym z Gunicorn
-CMD ["gunicorn", "-b", "0.0.0.0:5000", "app:app"]
+# Uruchamiamy aplikację w trybie produkcyjnym z Gunicorn na porcie 20123
+CMD ["gunicorn", "-b", "0.0.0.0:20123", "app:app"]
